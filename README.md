@@ -14,5 +14,7 @@ You can find PDF versions of the published materials
 Author
 ======
 Email: jschauma@netmeister.org
+
 Twitter: [@jschauma](https://twitter.com/jschauma)
+
 Website: https://www.netmeister.org
