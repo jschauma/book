@@ -1,0 +1,62 @@
+\input{common.tex}
+
+\makeindex
+\newindex{names}{adx}{and}{Name Index}
+
+\begin{document}
+
+\title{Principles of System Administration}
+\author{Jan Schaumann \\
+\texttt{jschauma@netmeister.org}}
+
+\maketitle
+
+\tableofcontents
+\lstlistoflistings
+\phantomsection
+\listoffigures
+%\listoftables
+
+\include{common/glossary}
+
+\frontmatter
+\include{intro/prepreface}
+\include{intro/introduction}
+
+\mainmatter
+\part[Introduction and General Concepts]
+{Introduction and General Concepts}
+\label{part:introduction}
+
+\include{01/intro-to-sysadmin}
+\include{02/unix}
+\include{03/documentation-techniques}
+
+\part[Fundamental Technologies and Concepts]
+{Fundamental Technologies and Concepts}
+\label{part:fundamentals}
+
+\include{intro/partII}
+
+\include{04/filesystems-and-storage-models}
+\include{05/software-installation-and-package-management}
+\include{06/of-users-and-groups}
+\include{07/configuration-management}
+\include{08/automation}
+\include{09/scalable-tools}
+
+\printglossaries
+\addcontentsline{toc}{chapter}{Glossary of Terms}
+
+\include{common/image-attribution}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\clearpage
+\addcontentsline{toc}{chapter}{Name Index}
+\printindex[names]
+
+
+\end{document}

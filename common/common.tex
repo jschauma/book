@@ -1,0 +1,129 @@
+\documentclass[12pt,openany,oneside]{book}
+
+\usepackage{color}
+\usepackage{graphicx}
+
+\usepackage{epstopdf}
+
+\usepackage[square,numbers,sectionbib]{natbib}
+\usepackage{chapterbib}
+\usepackage[hyphens]{url}
+
+\usepackage{hyperref}
+\usepackage{index}
+\usepackage[acronym,nopostdot]{glossaries}
+\makeglossaries
+
+\usepackage{bookmark}
+\usepackage{subfig}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+
+\lstset{basicstyle=\footnotesize\ttfamily,frame=shadowbox,captionpos=b,rulesepcolor=\color{gray}}
+\definecolor{notecolor}{RGB}{210,210,210}
+
+\usepackage{float}
+\newfloat{Note}{htbp}{note}
+
+\usepackage{fancybox}
+\usepackage{wrapfig}
+
+
+%	\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+%	\noindent\rule{\textwidth}{0.8pt}
+%	\rule{\textwidth}{0.4pt}
+%	\unhbox\mysidebox
+%	\begin{wrapfigure}{l}{30pt}
+%		\centering
+%		\includegraphics[width=30pt]{pics/tangent-deck}
+%	\end{wrapfigure}
+%}
+
+%		\begin{minipage}[t]{.1\textwidth}
+%			\vspace{0pt}
+%			\includegraphics[width=.5\textwidth]{pics/tangent-deck}
+%		\end{minipage}
+
+		%\begin{lrbox}{\mysidebox}
+%}{
+%		\end{lrbox}
+
+%		\fcolorbox{black}{notecolor}{
+%			\begin{minipage}[t]{.85\textwidth}
+%				\unhbox\mysidebox
+%			\end{minipage}
+%		}
+
+%		\begin{lrbox}{\mysidebox}
+		%\end{lrbox}
+
+\usepackage{framed}
+
+%XXX possibly create a "pitfall", "warning" box
+%XXX possibly turn into a float
+
+\newsavebox{\mysidebox}
+\newenvironment{sidenote} {
+	\begin{lrbox}{\mysidebox}
+}{
+	\end{lrbox}
+	\begin{wrapfigure}{l}{25pt}
+		\centering
+		\includegraphics[width=25pt]{common/pics/tangent-deck}
+	\end{wrapfigure}
+	\begin{framed}
+		\noindent\unhbox\mysidebox
+	\end{framed}
+}
+
+\newsavebox{\myexpbox}
+\newenvironment{experience}
+{
+	\begin{lrbox}{\myexpbox}
+}{
+	\end{lrbox}
+	\begin{wrapfigure}{l}{30pt}
+		\centering
+		\includegraphics[width=30pt]{common/pics/totally-socks-donkey}
+	\end{wrapfigure}
+	\begin{framed}
+		\noindent\unhbox\myexpbox
+	\end{framed}
+}
+
+
+\newsavebox{\mytapbox}
+\newenvironment{advice}
+{
+	\begin{lrbox}{\mytapbox}
+}{
+	\end{lrbox}
+	\begin{wrapfigure}{l}{30pt}
+		\centering
+		\includegraphics[width=30pt]{common/pics/pointer}
+	\end{wrapfigure}
+	\begin{framed}
+		\noindent\unhbox\mytapbox
+	\end{framed}
+}
+
+
+
+
+%{
+%	\begin{minipage}{.15\textwidth}
+%		\includegraphics[width=.5\textwidth]{pics/tangent-deck}
+%	\end{minipage}
+%	\begin{lrbox}{mybox}
+%}{
+%	\end{lrbox}
+%	\fcolorbox{black}{notecolor}{
+%		\begin{minipage}{.75\textwidth}
+%			\usebox{\mybox}
+%		\end{minipage}
+%	}
+%}
+
+\newcommand{\manpage}[1]{{\tt #1}\index{\tt #1}}
