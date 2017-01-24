@@ -583,8 +583,8 @@ pointers to the software architecture, the rationale
 for certain design decisions, a software specific FAQ
 etc.
 
-\section{Formats and Collaboration}
-\label{documentation:formats-and-collaboration}
+\section{Collaboration}
+\label{documentation:collaboration}
 
 Unlike other kinds of writing, creating and
 maintaining system documentation is not a solitary
@@ -622,6 +622,89 @@ design and architecture decisions can be invaluable
 even if the documents do not reflect the {\em current}
 state.
 
+Documentation should be kept under some kind of
+revision control, much like software code is.  Many
+different solutions exist, ranging from storing simple
+text or markup files in your own repository, to using a
+database backed ``Wiki\index{Wiki}'', to hosting
+documents online using a cloud provider, to using e.g.
+Google Docs\index{Google Docs}.  Realistically, you
+will likely encounter a combination of all of the
+above.  When choosing a solution, focus on these
+properties:
+
+\begin{itemize}
+	\item Usability; how easy is it for you and
+		your colleages to edit the documents,
+		to keep them up to date?
+	\item Collaboration; how easy is it for others
+		to make corrections, to comment on the content,
+		to suggest and provide improvements?
+	\item Revision Control; how easy is it to
+		review a document's history, see what
+		has changed between edits, see who
+		made what changes when?
+	\item Access Control; how easy is it for you
+		to grant or deny access to individuals,
+		teams, the organization, the public?
+	\item Searchability; how easy is it for you
+		and your users to discover the documents?
+\end{itemize}
+
+Whichever collaborative documentation solution you
+choose remember that the easier you make it for
+yourself, your colleagues and your users to create
+content, to keep it up to date and to correct even
+minor errors, the better your documentation will be.
+And with good documentation come happy users, fewer
+alerts, and significantly less stress for you.
+
+\section{Formats}
+\label{documentation:formats}
+
+Finally, a word on the format of your documentation.
+Be aware of how your users might read the documents
+you provide.  Frequently, it is necessary to be able
+to search documents offline, to forward them via
+email, to link to them, or to copy and paste
+portions.
+
+With that in mind, be mindful of the format in which
+you generate and present your information.  System
+Administrators, heavily influenced by the Unix
+philosophy\index{Unix!Philosophy}, are often partial
+to plain ASCII text or simple markup formatting.
+
+To increase the readability of your documents use a
+short line-length and the copious use of paragraphs.
+Viewing a single large block of run-away text with no
+line breaks immediately puts stress on the reader, as
+absorbing the information provided therein requires a
+high degree of concentration and eye movement.
+
+Breaking up your text into smaller paragraphs helps
+the reader relax and facilitates reading
+comprehension, speed, and ease.  Write the text as you
+would read it out aloud, with paragraphs allowing the
+reader to catch their breath for a second.
+
+If you are writing a longer technical document, you
+can further structure it using headlines, numbered
+sections, subsections etc. using different ways to
+underline or emphasize the section titles.  Similarly,
+you can use itemization, bulleted or numbered lists,
+or indentation to make your text easy to read.
+
+Use short sentences, even (and especially) if you're
+German.  Just like one single block of text is hard to
+read, so are never ending sentences with multiple
+conditionals and subclauses.  You are not writing
+Molly Bloom's Soliloquy.
+
+Use proper punctuation.  A period will almost always
+suffice; semicolons may be used as needed, but
+exclamation points are rarely called for!
+
 Resist the temptation to use images instead of text.
 If you are unable to distill the concepts or thoughts
 into language, then you have likely not fully
@@ -634,16 +717,18 @@ paragraph be re-read with ease; a screencast or video,
 to cite an extreme example, must be watched one
 excruciating minute at a time (not to mention the
 challenges non-textual media pose to visually impaired
-users).
+users). \\
 
-Whichever collaborative documentation solution you
-choose -- whichever ``Wiki\index{Wiki}'' or repository
-or markup dialect -- remember that the easier you make
-it for yourself, your colleagues and your users to
-create content, to keep it up to date and to correct
-even minor errors, the better your documentation will
-be.  And with good documentation come happy users,
-fewer alerts, and significantly less stress for you.
+That's it - with the above advice in mind, you should
+find that you soon spend a lot more time on defining
+your thoughts and putting the important information
+forward rather than fiddling with font faces, sizes
+and colors.
+
+And remember, if plain text is good enough for
+\glslink{rfc}{RFC}s, the standards used to define the
+internet and just about everything running on it, then
+it's quite likely going to be good enough for you.
 
 \vfill
 \pagebreak
