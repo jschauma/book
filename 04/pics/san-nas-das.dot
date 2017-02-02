@@ -1,0 +1,83 @@
+digraph storage {
+	compound = true;
+	ratio="expand";
+	ranksep="0.8 equally";
+	nodesep=0.75;
+
+	subgraph cluster0 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "OS";
+
+		app0 [label="Application Software", shape=box, width=2.0];
+		fs0 [label="File System", shape=box,width=2.0];
+
+		app0 -> fs0 [dir=both,minlen=1];
+	}
+
+	subgraph cluster1 {
+		color = "white";
+
+		subgraph cluster15 {
+        		node [style=filled,color=white];
+
+        		style = "filled";
+        		color = "lightgrey";
+        		label = "OS";
+
+			app1 [label="Application Software", shape=box, width=2.0];
+		}
+
+		subgraph cluster2 {
+        		node [style=filled,color=white];
+
+        		style = "filled";
+        		color = "lightgrey";
+        		label = "File Server";
+
+			fs2 [label="File System", shape=box, width=2.0];
+			app1 -> fs2 [dir=both,minlen=1,ltail=cluster15,lhead=cluster2,label="    NAS"];
+		}
+
+	}
+
+	subgraph cluster3 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "SAN Device";
+
+		st3 [label="Storage", shape=box, width=2.0];
+    	}
+
+	subgraph cluster4 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "SAN Device";
+
+		st4 [label="Storage", shape=box, width=2.0];
+    	}
+
+	subgraph cluster5 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "SAN Device";
+
+		st5 [label="Storage", shape=box, width=2.0];
+    	}
+	nw [label="Network\n(FCP, FCoE, iSCSI)"];
+
+	fs0 -> nw [dir=both,ltail=cluster0,label="    DAS"];
+	fs2 -> nw [dir=both,ltail=cluster2];
+
+	nw -> st3 [dir=both,lhead=cluster3];
+	nw -> st4 [dir=both,lhead=cluster4];
+	nw -> st5 [dir=both,lhead=cluster5];
+}

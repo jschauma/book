@@ -1,0 +1,34 @@
+digraph storage {
+	compound = true;
+	ratio="expand";
+	ranksep="0.92 equally";
+	nodesep=0.75;
+
+	subgraph cluster1 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "OS";
+
+		app1 [label="Application Software", shape=box, width=2.0];
+	}
+
+	nw1 [label="Network"];
+
+	subgraph cluster2 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "File Server";
+
+		fs1 [label="File System", shape=box, width=2.0];
+		st1 [label="Storage", shape=box, width=2.0];
+
+		fs1 -> st1 [dir=both,minlen=1];
+    	}
+
+	app1 -> nw1 [dir=both,ltail=cluster1];
+	nw1 -> fs1 [dir=both,lhead=cluster2];
+}

@@ -1,0 +1,76 @@
+digraph storage {
+	compound = true;
+	ratio="expand";
+	ranksep="0.8 equally";
+	nodesep=0.75;
+
+	subgraph cluster0 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "Client";
+
+		app0 [label="Application Software", shape=box, width=2.0];
+	}
+	subgraph cluster1 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "Client";
+
+		app1 [label="Application Software", shape=box, width=2.0];
+	}
+	subgraph cluster2 {
+        	node [style=filled,color=white];
+
+        	style = "filled";
+        	color = "lightgrey";
+        	label = "Client";
+
+		app2 [label="Application Software", shape=box, width=2.0];
+	}
+
+
+	subgraph cluster3 {
+		label = "Cloud Storage Provider";
+		subgraph cluster31 {
+			node [style=filled,color=white];
+
+			style = "filled";
+			color = "#777777";
+			label = "SAN Device";
+
+			st3 [label="Storage", shape=box, width=2.0];
+		}
+
+		subgraph cluster32 {
+			node [style=filled,color=white];
+
+			style = "filled";
+			color = "#777777";
+			label = "SAN Device";
+
+			st4 [label="Storage", shape=box, width=2.0];
+		}
+
+		subgraph cluster33 {
+			node [style=filled,color=white];
+
+			style = "filled";
+			color = "#777777";
+			label = "SAN Device";
+
+			st5 [label="Storage", shape=box, width=2.0];
+		}
+	}
+
+	app0 -> nw [dir=both,ltail=cluster0];
+	app1 -> nw [dir=both,ltail=cluster1];
+	app2 -> nw [dir=both,ltail=cluster2];
+
+	nw [label="Internet"];
+
+	nw -> st4 [dir=both,lhead=cluster3,minlen=2];
+}

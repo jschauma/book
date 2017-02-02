@@ -356,6 +356,16 @@ PCI-X, or PCIe card, connecting, for example, a storage medium to a host
 system.}
 }
 
+\newglossaryentry{hdd}
+{
+	name={HDD},
+	first={\acrlong{hdd} (HDD)},
+	long={Hard Disk Drive},
+	description={{\em \acrlong{hdd}} A data
+storage device using magnetic storage, frequently
+rotating platters allowing for random access via a
+magnetic read-write head.  See also: SDD}
+}
 \newglossaryentry{http}
 {
 	name={HTTP},
@@ -442,7 +452,9 @@ the public internet.}
 	first={\acrlong{ip} (IP)},
 	long={Internet Protocol},
 	description={{\em \acrlong{ip}} The fundamental protocol underlying the
-Internet, routing datagrams across networks.}
+Internet, routing datagrams across networks.  Together
+with the \acrlong{ip}, the suite is commonly referred
+to as {\em TCP/IP}. See also: TCP, UDP}
 }
 
 \newglossaryentry{ipc}
@@ -514,6 +526,17 @@ common programming languages.
 	}
 }
 
+\newglossaryentry{lan}
+{
+	name={lAN},
+	first={\acrlong{lan} (LAN)},
+	long={Local Area Network},
+	description={{\em \acrlong{lan}} A physically
+close computer network connecting individual
+components on Layer 1 or 2 of the OSI stack. See also:
+WAN}
+}
+
 \newglossaryentry{lba}
 {
 	name={LBA},
@@ -562,6 +585,18 @@ Administration.  See also: LISA.}
 	long={Logical Unit Number},
 	description={{\em \acrlong{lun}} A numerical identifier for a distinct
 storage unit or volume in a Storage Area Network.}
+}
+
+\newglossaryentry{lvm}
+{
+	name={LVM},
+	first={\acrlong{lvm} (LVM)},
+	long={Logical Volume Manager},
+	description={{\em \acrlong{lvm}} A tool or
+technique to allocate and manage storage space across
+multiple block-storage devices and to present them to
+the OS as a virtual block device, possibly increasing
+storage capacity or performance. }
 }
 
 \newglossaryentry{multics}
@@ -646,6 +681,18 @@ respectively).}
 	first={\acrlong{os} (OS)},
 	long={Operating System},
 	description={{\em \acrlong{os}} \empty}
+}
+
+\newglossaryentry{osi}
+{
+	name={OSI},
+	first={\acrlong{osi} (OSI)},
+	long={Open Systems Interconnection model},
+	description={{\em \acrlong{osi}} A conceptual
+model characterizing and expanding on the layers
+described in the TCP/IP model.  The OSI model
+describes seven layers: Physical, Data, Network,
+Transport, Session, Presentation, Application.}
 }
 
 \newglossaryentry{pata}
@@ -764,6 +811,15 @@ related technologies, research, protocols etc.  Some of the RFCs may
 become actual {\em standards}; many of them are de-facto standards.}
 }
 
+\newglossaryentry{sdd}
+{
+	name={SDD},
+	first={\acrlong{sdd} (SDD)},
+	long={Solid State Drive},
+	description={{\em \acrlong{sdd}} A
+storage device using non-volatile Flash memory to
+store data.  See also: HDD}
+}
 \newglossaryentry{s3}
 {
 	name={S3},
@@ -941,6 +997,19 @@ the ongoing cost (both monetary as well as in human resources) to
 maintain, update, patch and debug the software.}
 }
 
+\newglossaryentry{tcp}
+{
+	name={TCP},
+	first={\acrlong{tcp} (TCP)},
+	long={Transmission Control Protocol},
+	description={{\em \acrlong{tcp}} One of the fundamental protocols underlying the
+Internet, routing datagrams across networks.  Together
+with the \acrlong{ip}, the suite is commonly referred
+to as {\em TCP/IP}.  TCP provides for reliable,
+connection-oriented connections between e.g. a server
+and a client.  See also: IP, UDP}
+}
+
 \newglossaryentry{tls}
 {
 	name={TLS},
@@ -950,6 +1019,18 @@ maintain, update, patch and debug the software.}
 encryption of network traffic on the application layer, currently defined
 in RFC5246.  TLS was initially based on SSL, with which it is frequently
 used interchangeably.}
+}
+
+\newglossaryentry{udp}
+{
+	name={UDP},
+	first={\acrlong{udp} (UDP)},
+	long={User Datagram Protocol},
+	description={{\em \acrlong{udp}} A transport
+layer protocol (i.e. operating on layer 3 of the
+TCP/IP model, layer 4 of the OSI model), which allows
+for connectionless, unreliable communications between
+two endpoints.  See also: IP, TCP}
 }
 
 \newglossaryentry{uefi}
@@ -1013,6 +1094,17 @@ vnode} indicates this heritage.}
 	description={{\em \acrlong{vps}} A virtual machine provided by a
 hosting company to customers.  Payment models range from hourly to monthly
 or longer subscriptions.}
+}
+
+\newglossaryentry{wan}
+{
+	name={WAN},
+	first={\acrlong{wan} (WAN)},
+	long={Wide Area Network},
+	description={{\em \acrlong{wan}} A computer
+network spanning wide-ranging regions, possibly
+connecting different \acrlong{lan}s, designed to
+overcome physical proximity requirements. See also: LAN}
 }
 
 \newglossaryentry{xml}
