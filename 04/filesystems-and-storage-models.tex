@@ -1041,12 +1041,14 @@ known as ``IBM PC-compatible'' computers) has replaced
 most other systems.  For simplicity's sake, we will
 assume this architecture throughout this chapter.},
 this code is known as the {\em Master Boot
-Record}\index{Master Boot Record} or MBR.  In a
-classical MBR the bootstrap code area itself takes
-up 446 bytes and each partition entry requires 16
-bytes.  As a result, we can have at most four such
-{\em BIOS partitions}\index{Partitions!BIOS} that the
-MBR can transfer control to.
+Record}\index{Master Boot Record} or MBR\glslink{mbr}.
+In a classical MBR the last two bytes of this sector
+contain the signature {\tt 0x55 0xAA}; bootstrap code
+area itself takes up 446 bytes, leaving 64 bytes of
+space.  At 16 bytes per partition entry, we can have
+at most four such {\em BIOS
+partitions}\index{Partitions!BIOS} that the MBR can
+transfer control to.
 
 \begin{lstlisting}[float,label=code:fdisk,caption=fdisk(8) sample invocation
 and output on a Linux system]
@@ -1065,7 +1067,7 @@ Units = cylinders of 16065 * 512 = 8225280 bytes
 Sometimes you may want to divide the available disk
 space into more than four partitions.  In order to
 accomplish this, instead of four {\em primary}
-partitions, the MBR allows you to specify three
+partitions, the \gls{mbr} allows you to specify three
 primary and one so-called {\em extended} partition,
 which can be subdivided further as needed.  When the
 system boots, the \gls{bios} will load the MBR code, which
@@ -1127,18 +1129,19 @@ may seem laughably small in just a few years.
 \end{sidenote}
 
 
-Just as the first sector of the disk contains the MBR,
-so does the first sector of a \gls{bios} partition
-contain a {\em volume boot record}\index{volume boot
-record}, also known as a {\em partition boot
-sector}\index{partition boot sector}.  In this sector,
-the system administrator may have placed a
-second-stage bootloader\index{bootloader}, a small
-program that allows the user some control over the
-boot process by providing, for example, a selection of
-different kernels or boot options to choose from.
-Only one partition is necessary to boot the OS, but
-this partition needs to contain all the libraries and
+Just as the first sector of the disk contains the
+\gls{mbr}, so does the first sector of a \gls{bios}
+partition contain a {\em volume boot
+record}\index{volume boot record}, also known as a
+{\em partition boot sector}\index{partition boot
+sector}.  In this sector, the system administrator may
+have placed a second-stage
+bootloader\index{bootloader}, a small program that
+allows the user some control over the boot process by
+providing, for example, a selection of different
+kernels or boot options to choose from.  Only one
+partition is necessary to boot the OS, but this
+partition needs to contain all the libraries and
 executables to bootstrap the system.  Any additional
 partitions are made available to the OS at different
 points during the boot process.
