@@ -601,7 +601,7 @@ storage capacity or performance. }
 
 \newglossaryentry{mbr}
 {
-	name={mbr},
+	name={MBR},
 	first={\acrlong{mbr} (MBR)},
 	long={Master Boot Record},
 	description={{\em \acrlong{mbr}} A special
@@ -1031,6 +1031,26 @@ and a client.  See also: IP, UDP}
 encryption of network traffic on the application layer, currently defined
 in RFC5246.  TLS was initially based on SSL, with which it is frequently
 used interchangeably.}
+}
+
+\newglossaryentry{tofu}
+{
+	name={TOFU},
+	first={\acrlong{tofu} (TOFU)},
+	long={Trust on First Use},
+	description={{\em \acrlong{tofu}} In secure
+communications, it may be difficult or impossible to
+verify the identify of a remote party prior to e.g.
+establishing a connection.  After an initial
+communication, a trust identifier may be exchanged,
+which the client might store locally and then report
+any possible mismatches on subsequent connections.
+This act of initially accepting the token without
+explicit verification is then referred to as {\em
+Trust on First Use}.  A common example might be a user
+accepting the ssh hostkey fingerprint of a host they
+have not previously connected to.
+}
 }
 
 \newglossaryentry{udp}

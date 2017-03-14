@@ -29,6 +29,8 @@ FIGURES=	common/pics/totally-socks-donkey.pdf			\
 		04/pics/box.pdf						\
 		04/pics/das.pdf						\
 		04/pics/nas.pdf						\
+		04/pics/huawei.pdf					\
+		04/pics/maxtor.pdf					\
 		04/pics/san-nas-das.pdf					\
 		04/pics/cloud-storage.pdf				\
 		04/pics/open-hard-drive.pdf				\
@@ -45,9 +47,14 @@ FIGURES=	common/pics/totally-socks-donkey.pdf			\
 		04/pics/ufs-details.pdf					\
 		04/pics/ls-l.pdf					\
 		05/pics/many-boxes.pdf					\
+		05/pics/POST.pdf					\
+		05/pics/BIOS.pdf					\
+		05/pics/grub.pdf					\
 		05/pics/opensolaris-install.pdf				\
 		05/pics/types-of-software.pdf				\
 		05/pics/wireshark-dependencies.pdf 			\
+		05/pics/bower.pdf 					\
+		05/pics/pip.pdf 					\
 		06/pics/user-mapping.pdf 				\
 		06/pics/user-groups.pdf 				\
 		06/pics/groups-machines.pdf				\
