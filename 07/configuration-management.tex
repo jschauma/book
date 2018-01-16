@@ -1326,8 +1326,8 @@ tools again in Chapter
 \ref{chap:building-scalable-tools}.)
 
 \begin{lstlisting}[basicstyle=\scriptsize,float,label=code:cm:idempotence,caption={Idempotent and non-idempotent commands.}]
-$ cd /etc                                           # not idempotent
-$ rm resolv.conf                                    # not idempotent
+$ cd etc                                            # not idempotent
+$ rm resolv.conf                                    # idempotent
 $ echo "nameserver 192.168.0.1" > resolv.conf       # idempotent
 $ echo "nameserver 192.168.0.2" >> resolv.conf      # not idempotent
 $ chown root:wheel resolv.conf                      # idempotent
