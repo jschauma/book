@@ -62,7 +62,8 @@ FIGURES=	common/pics/totally-socks-donkey.pdf			\
 		07/pics/change-sets.pdf 				\
 		07/pics/host-sets.pdf					\
 		08/pics/tools-evolution.pdf				\
-		08/pics/wall-e.pdf
+		08/pics/wall-e.pdf					\
+		09/pics/army-knife.pdf
 
 
 .SUFFIXES: .tex .dvi .ps .pdf .txt .fig .eps .png .jpg .gif .inx .srt .dot
