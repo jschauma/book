@@ -205,8 +205,15 @@ pages in which the command is described.  That is, a
 reference to the {\tt stat(1)} command differs from a
 reference to the {\tt stat(2)} system call; the
 documentation for either can be found by providing the
-section number to the {\tt man(1)} command, e.g.: {\tt
-man 2 stat}.
+section number to the {\tt man(1)} command:
+
+If you see ``{\tt stat(2)}'' referenced, you'd type
+{\tt man 2 stat} to get the manual page for the system
+call; if you see ``{\tt stat(1)}'', you'd type {\tt
+man 1 stat} to get the manual page for the command.
+Leaving out the section number will get you the {\em
+first} matching manual page, so {\tt man stat} and
+{\tt man 1 stat} would be equivalent.
 
 % XXX: bold face interesting things?
 \begin{lstlisting}[float,label=code:sample,caption=Sample command-line invocations]
@@ -220,7 +227,7 @@ root
 $
 \end{lstlisting}
 
-This book contains a number of code examples and
+Next, this book contains a number of code examples and
 listings of commands to be executed at the shell
 prompt.  To distinguish between commands entered as a
 regular user and commands entered as the superuser, we
