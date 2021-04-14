@@ -1305,7 +1305,7 @@ used during the installation of NetBSD]Manual
 installation of NetBSD using the \manpage{fdisk(8)},
 \manpage{disklabel(8)}, \manpage{newfs(8)}, and
 \manpage{installboot(8)} commands.}]
-# fdisk -f -u 0 -s 169/63/4194241 /dev/rwd0d
+# fdisk -f -u -0 -s 169/63/4194241 /dev/rwd0d
 # fdisk -f -c /usr/mdec/mbr /dev/rwd0d
 # fdisk -f -a -0 /dev/rwd0d
 # disklabel -e -I wd0
