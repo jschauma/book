@@ -3,9 +3,13 @@ Principles of System Administration
 
 This repository contains the published parts of my
 work in progress book "Principles of System
-Administration" accompanying my class at
-[Stevens Institute of Technology](http://www.cs.stevens.edu/~jschauma/615/)
-(see also: [course materials](https://github.com/jschauma/cs615asa)).
+Administration" accompanying my class at [Stevens
+Institute of
+Technology](http://www.cs.stevens.edu/~jschauma/615/)
+(see also: [course
+materials](https://github.com/jschauma/cs615asa) and
+[video
+lectures](https://www.youtube.com/channel/UCK9UCt1zAQ9JvTG0o6Z8zpg).
 
 You can find PDF versions of the published materials
 (as well as a bit more about the book)
