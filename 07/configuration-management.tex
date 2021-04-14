@@ -658,22 +658,23 @@ descriptions that install an \manpage{sshd\_config(5)}
 file by way of copying a template from the
 configuration master to the local system and expanding
 it in place before finally restarting \manpage{sshd(8)} if necessary.}]
-bundle agent sshd(parameter) {
+bundle agent sshd {
     files:
         "/tmp/sshd_config.tmpl"
             perms     => mog("0600","root","root"),
-            copy_from => secure_cp("/templates/etc/ssh/sshd_config",
+            copy_from => remote_dcp("/templates/etc/ssh/sshd_config",
                                    "cf-master.example.com");
 
         "/etc/ssh/sshd_config"
             perms     => mog("0600","root","root"),
-            create    => true,
+            create    => "true",
             edit_line => expand_template("/tmp/sshd_config.tmpl"),
-            classes   => if_repaired("restart_sshd");
+            classes   => results( "bundle", "sshd_config" );
 
-    commands:
-        restart_sshd::
-            "/etc/rc.d/sshd restart"
+    services:
+      sshd_config_repaired::
+        "sshd"
+          service_policy => "restart";
 }
 \end{lstlisting}
 \end{minipage}
