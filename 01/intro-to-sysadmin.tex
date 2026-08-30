@@ -192,7 +192,7 @@ avoid accidental leaking of secrets to disk. \\ [10pt]
 And therein lies the bug: \verb+less(1)+ was invoked
 by the super user, it would check the permissions on
 the file \verb+/root/.lesshst+, follow the redirection
-to \verb+/dev/null+ find that they're not \verb+0600+
+to \verb+/dev/null+, find that they're not \verb+0600+
 and call \verb+chmod(2)+, yielding and
 unreadable/unwritable \verb+/dev/null+.  We were able
 to confirm this behaviour and identified a code change
@@ -1032,7 +1032,7 @@ awareness of this trait.
 The System Adminstrator's job definition is diverse,
 and so is the rather significant change the profession
 has undergone over the years.  Gone are the days of
-shuffling punch cards, of cycling magentic tapes, of
+shuffling punch cards, of cycling magnetic tapes, of
 connecting your dumb terminals using RS-232 serial
 connections, of stringing ribbon cables inside large
 computer cases... or are they?

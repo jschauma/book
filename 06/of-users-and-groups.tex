@@ -50,7 +50,7 @@ its inherent requirements and trust models will help
 in formalizing your access control requirements so
 as to express and apply them using your configuration
 management system\index{Configuration Management}, as
-we will discuss in the Chapter
+we will discuss in Chapter
 \ref{chap:configuration-management}.
 
 As one of our Pillars of Exceptional System Design,
@@ -204,7 +204,7 @@ beyond the scope of this chapter.  For completeness's
 sake, however, we should mention that more modern
 access semantics, such as {\em mandatory access
 controls} (MAC), {\em role-based access controls}
-(RBAC), or POSIX ``capabilities''  can been added,
+(RBAC), or POSIX ``capabilities''  can be added,
 albeit at the cost of increased complexity.}
 
 Reviewing these access rules, we can identify mappings
@@ -667,7 +667,7 @@ If this password hash matches the one on record,
 access is granted, and you are logged in.  From that
 moment on, regular Unix semantics and permissions will
 apply to decide whether or not access to a given
-resources (e.g. the ability to write to a file) is
+resource (e.g. the ability to write to a file) is
 granted.
 
 Passwords are an easy and convenient way for users to
@@ -721,7 +721,7 @@ accessed over the network.  The {\em
 \gls{ldap}\index{LDAP}} is an example of this
 approach.  However, it should be noted that the
 benefits of a central location of this information
-carries a certain prize, as well: if the host(s)
+carries a certain price, as well: if the host(s)
 providing this service becomes unavailable, thousands
 of hosts can become unusable or see debilitating
 errors.  This problem can of course be defined in a
@@ -740,7 +740,7 @@ means of authentication, largely due to human nature:
 most people are rather terrible at remembering complex
 passwords (which are harder for computers to crack)
 and hence tend to use and reuse across different sites
-a small set of a simple passwords This means that
+a small set of simple passwords.  This means that
 accounts on your systems may get compromised by
 password leaks in another, completely different and
 independent environment!
@@ -827,7 +827,7 @@ RADIUS}\index{\tt RADIUS} remote authentication
 protocols allow well-defined control of remote access
 do, for the most part, still follow an all-or-nothing
 access model locally.  The access credentials for the
-privileged accounts on these devices (as example might
+privileged accounts on these devices (an example might
 be the ``enable'' password, used to enter privileged
 mode on a router or switch) need to be managed and
 shared with the same care that a {\tt root} password
@@ -885,7 +885,7 @@ these general rules:
 		users in your organization {\em today}, you will
 		eventually grow to a size where this no longer holds.  It
 		is near impossible to later on put in place restrictions
-		on users' privileges, just as it is to anticiapate the
+		on users' privileges, just as it is to anticipate the
 		possibly sudden departure of trusted employees.
 	\item {\em You will always face tradeoffs.}  No matter which
 		authentication mechanism you choose, there are downsides.

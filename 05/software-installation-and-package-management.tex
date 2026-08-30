@@ -226,7 +226,7 @@ might then include these steps:
 		see Chapter \ref{file systems:storage-models:dividing-and-combining-disks:partitions}
 	\item execution of a secondary or second-stage boot loader --
 		\index{boot loader!second-stage} a small program allowing
-		the user to interactively choose an operating systems or
+		the user to interactively choose an operating system or
 		kernel to boot; examples include GRUB\index{GRUB} (Figure
 		\ref{fig:software-installation:grub}) or
 		{\tt boot(8)}\index{\tt boot(8)}
@@ -577,7 +577,7 @@ flavors.  \\
 As different OS providers disagree on what components
 should be part of their final product, it becomes very
 difficult to declare a software package to belong into
-any one of the cateogries we've defined.  However,
+any one of the categories we've defined.  However,
 most system administrators ultimately develop an
 instinctive idea of what should or should not be
 considered {\em essential}, what can and cannot be
@@ -1009,7 +1009,7 @@ distinct phases:
 		state than under normal circumstances, and it is possible
 		to forget to enable or disable a service.  Placing the
 		system into production use without a fresh reboot might
-		lead to unexepcted results when the system is rebooted at
+		lead to unexpected results when the system is rebooted at
 		a later point.
 \end{itemize}
 
@@ -1058,7 +1058,7 @@ you're not truly a system administrator until you have
 written your own deployment system. Or configuration
 management system.  Or inventory database.  Or
 parallel secure shell to perform tasks across all of
-your host.  Or... \\ [10pt]
+your hosts.  Or... \\ [10pt]
 
 Anyway, the system we wrote was elegant, and it taught
 us a lot about the details of the OS installation
@@ -1264,7 +1264,7 @@ the hood!  \\
 
 Listing \ref{code:netbsd-install} shows the most basic
 steps to perform a minimal OS installation.  It is
-interesting to analyze each of them (and constrast the
+interesting to analyze each of them (and contrast the
 sequence for different operating systems), as doing so
 often illustrates a number of assumptions made about
 the use of the software.  The ease with which an OS
@@ -1782,7 +1782,7 @@ and configuration of the software in question.  To
 this end, they provide the capability for a given
 package to execute an arbitrary shell script provided
 in the package, with the privileges of the invoking
-using -- commonly the superuser.
+user -- commonly the superuser.
 
 In other words, it is important to understand that any
 time we use a package manager to retrieve and install
